@@ -1,0 +1,19 @@
+.im-complain {
+  .im-complain-content {
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    max-width: 100%;
+
+    .im-complain-form {
+      display: flex;
+      gap: 15px;
+    }
+  }
+}
+
+.im-input-file {
+  padding: 10px;
+  margin-bottom: 20px;
+}

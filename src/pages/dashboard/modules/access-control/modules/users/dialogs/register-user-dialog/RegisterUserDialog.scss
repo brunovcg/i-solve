@@ -1,0 +1,12 @@
+.im-register-user-dialog {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+
+  .im-register-user-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+}

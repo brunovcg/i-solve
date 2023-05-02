@@ -1,0 +1,17 @@
+.im-manager-user-groups-dialog {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  .im-manager-user-groups-container {
+    padding: 20px;
+
+    .im-member-add-groups {
+      display: flex;
+      gap: 20px;
+
+      &.im-mobile-view {
+        flex-direction: column;
+      }
+    }
+  }
+}

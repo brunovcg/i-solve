@@ -1,0 +1,23 @@
+.im-group-members-dialog {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .im-group-member-container {
+    padding: 20px;
+  }
+
+  .im-group-member-container.im-group-member-container-table {
+    height: 350px;
+    overflow: hidden;
+  }
+
+  .im-group-add-members {
+    display: flex;
+    gap: 20px;
+
+    &.im-mobile-view {
+      flex-direction: column;
+    }
+  }
+}

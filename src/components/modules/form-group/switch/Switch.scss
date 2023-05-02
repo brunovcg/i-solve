@@ -1,0 +1,50 @@
+.im-switch {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  button {
+    all: unset;
+  }
+
+  .im-switch-root {
+    width: 35px;
+    height: 20px;
+    border-radius: 9999px;
+    position: relative;
+  }
+
+  .im-switch-root {
+    background-color: var(--container-dark-color);
+    border: 1px solid var(--container-white-color);
+  }
+
+  .im-switch-root[data-state='checked'] {
+    background-color: var(--primary-color);
+  }
+
+  .im-switch-thumb {
+    display: block;
+    width: 16px;
+    height: 16px;
+    background-color: var(--container-white-color);
+    border-radius: 9999px;
+    transition: transform 100ms;
+    transform: translateX(2px);
+    will-change: transform;
+  }
+  .im-switch-thumb[data-state='checked'] {
+    transform: translateX(17px);
+  }
+
+  &.im-disabled {
+    .im-switch-root {
+      background-color: var(--disabled-color);
+    }
+    .im-switch-root[data-state='checked'] {
+      background-color: var(--disabled-primary-color);
+    }
+  }
+}
