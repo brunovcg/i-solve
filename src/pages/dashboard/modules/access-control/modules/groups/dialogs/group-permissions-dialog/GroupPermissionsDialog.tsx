@@ -44,7 +44,7 @@ export default function GroupMembersDialog() {
 
   return (
     <Container className="im-group-permissions-dialog">
-      <Title icon={GRID} text='Tabela de módulos' />
+      <Title icon={GRID} text="Tabela de módulos" />
       <Grid columns={permissionColumns} rows={permissionRows} />
     </Container>
   );

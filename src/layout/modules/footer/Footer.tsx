@@ -1,6 +1,6 @@
 import StyledFooter from './Footer.styled';
 
-import { useWindowDimensions} from '../../../hooks';
+import { useWindowDimensions } from '../../../hooks';
 
 export default function Footer() {
   const { isMobileViewport } = useWindowDimensions();
