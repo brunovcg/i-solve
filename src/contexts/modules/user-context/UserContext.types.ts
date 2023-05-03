@@ -26,6 +26,8 @@ export type User =
 
 export type UserContextTypes = {
   isUserLogged: boolean;
+  isUserRegularUser: boolean;
+  isUserCustomer: boolean;
   isUserAdmin: boolean;
   signIn: ({ payload, onComplete }: SignInArgs) => void;
   signOut: () => void;

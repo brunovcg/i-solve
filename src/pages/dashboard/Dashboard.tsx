@@ -7,14 +7,16 @@ import { Title } from '../../components';
 import { useRoutes } from '../../hooks';
 
 export default function Dashboard() {
-  const { dashboard, accessControl, processRunner } = routes;
+  const { dashboard, accessControl, search, complain, inbox } = routes;
   const { currentRoutePath } = useRoutes();
   const { drawerMenu } = useDashboardDrawer();
 
   const moduleSelection = {
     [dashboard.path]: 'Dashboard',
     [accessControl.path]: 'Controle de Acesso',
-    [processRunner.path]: 'Process Runner',
+    [complain.path]: 'Reclamar',
+    [search.path]: 'Consultar Sistemas',
+    [inbox.path]: 'Caixa de Entrada',
   };
 
   const currentSelectedModule = moduleSelection[currentRoutePath as keyof typeof moduleSelection];

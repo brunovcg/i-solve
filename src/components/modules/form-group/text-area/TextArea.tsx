@@ -142,6 +142,7 @@ function TextArea(
           maxLength={maxLength}
           placeholder={placeholder}
           disabled={disabled}
+          value={textareaValue}
           onFocus={handleFocus}
           {...customProps()}
         />

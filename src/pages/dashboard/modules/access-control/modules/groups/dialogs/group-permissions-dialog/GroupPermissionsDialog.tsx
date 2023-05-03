@@ -6,7 +6,7 @@ import { CONSTANTS } from '../../../../../../../../constants';
 const { GRID } = CONSTANTS.GOOGLE_ICONS;
 
 export default function GroupMembersDialog() {
-  const permissionRows = ['Access Control', 'Dashboard', 'Consulta'].map((module, index) => ({
+  const permissionRows = ['Access Control', 'Dashboard', 'Consultar Sistemas'].map((module, index) => ({
     id: index,
     ApplicationModule: module,
     permissions: (

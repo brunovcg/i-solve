@@ -1,16 +1,16 @@
 import { useNavigate } from 'react-router-dom';
 import { CONSTANTS } from '../../../constants';
 import { routes } from '../../../router/routes';
-// import { useContext } from 'react';
-// import { UserContext } from '../../../contexts';
+import { useContext } from 'react';
+import { UserContext } from '../../../contexts';
 
-const { DASHBOARD, LOCK, GEAR, SUPPORT_AGENT } = CONSTANTS.GOOGLE_ICONS;
+const { DASHBOARD, LOCK, SEARCH, SUPPORT_AGENT, MAIL } = CONSTANTS.GOOGLE_ICONS;
 
 export default function useDashboardDrawer() {
   const navigate = useNavigate();
 
-  const { accessControl, welcome, processRunner, complain } = routes;
-  // const { isUserAdmin } = useContext(UserContext);
+  const { accessControl, welcome, search, complain, inbox } = routes;
+  const { isUserCustomer, isUserRegularUser, isUserAdmin } = useContext(UserContext);
 
   const handleMenuOptionClick = (navigationPath: string) => {
     navigate(navigationPath);
@@ -26,24 +26,31 @@ export default function useDashboardDrawer() {
     },
     {
       id: 2,
-      permit: true,
-      icon: GEAR,
-      text: 'Consulta',
-      onClick: () => handleMenuOptionClick(processRunner.path),
+      permit: isUserRegularUser || isUserAdmin,
+      icon: SEARCH,
+      text: 'Consultar Sistemas',
+      onClick: () => handleMenuOptionClick(search.path),
     },
     {
       id: 3,
-      permit: true,
+      permit: isUserAdmin,
       icon: LOCK,
       text: 'Controle de Acesso',
       onClick: () => handleMenuOptionClick(accessControl.path),
     },
     {
       id: 4,
-      permit: true,
+      permit: isUserCustomer,
       icon: SUPPORT_AGENT,
       text: 'Reclamar',
       onClick: () => handleMenuOptionClick(complain.path),
+    },
+    {
+      id: 5,
+      permit: isUserRegularUser,
+      icon: MAIL,
+      text: 'Caixa de Entrada',
+      onClick: () => handleMenuOptionClick(inbox.path),
     },
   ];
   return { drawerMenu };

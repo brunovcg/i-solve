@@ -4,8 +4,9 @@ const routes = {
   login: { path: '' },
   welcome: { path: '/dashboard' },
   accessControl: { path: '/dashboard/access-control' },
-  processRunner: { path: '/dashboard/process-runner' },
+  search: { path: '/dashboard/search' },
   complain: { path: '/dashboard/complain' },
+  inbox: { path: '/dashboard/inbox' },
 };
 
 export { routes };

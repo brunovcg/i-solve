@@ -13,7 +13,7 @@ const { DEVELOPMENT } = CONSTANTS.ENVIRONMENT;
 const { IM_APPLICATION_AWS_COGNITO_USER, IM_APPLICATION_AWS_COGNITO_EMAIL } = CONSTANTS.STORAGE.KEYS;
 const { COGNITO, IM_APPLICATION } = CONSTANTS.STORAGE.INITIALS;
 const { RENEW_SESSION } = CONSTANTS.EVENTS;
-const { ADMIN } = CONSTANTS.PERMISSIONS.COGNITO;
+const { ADMIN, CUSTOMER, USERS } = CONSTANTS.PERMISSIONS.COGNITO;
 const { environment } = environmentHelper;
 const { decodeStoredCognitoAccessToken } = jwtHelper;
 const {
@@ -43,6 +43,8 @@ export default function UserProvider({ children }: ProviderProps) {
   const navigate = useNavigate();
   const [user, setUser] = useState<User>(setUserInitialValue() as User);
   const isUserAdmin = useMemo(() => !!user?.permissions?.includes(ADMIN), [user?.permissions]);
+  const isUserCustomer = useMemo(() => !!user?.permissions?.includes(CUSTOMER), [user?.permissions]);
+  const isUserRegularUser = useMemo(() => !!user?.permissions?.includes(USERS), [user?.permissions]);
   const isUserLogged = !!Object.keys(user).length;
 
   const signIn = ({ payload, onError, onComplete }: SignInArgs) => {
@@ -89,8 +91,8 @@ export default function UserProvider({ children }: ProviderProps) {
   }, []);
 
   const providerValues = useMemo(
-    () => ({ isUserLogged, signIn, signOut, user, isUserAdmin, forgotPassword, changePasswordWithCode }),
-    [isUserLogged, signIn, signOut, user, isUserAdmin, forgotPassword, changePasswordWithCode]
+    () => ({ isUserLogged, signIn, signOut, user, isUserAdmin, forgotPassword, changePasswordWithCode, isUserCustomer, isUserRegularUser }),
+    [isUserLogged, signIn, signOut, user, isUserAdmin, forgotPassword, changePasswordWithCode, isUserCustomer, isUserRegularUser]
   );
 
   return <UserContext.Provider value={providerValues}>{children}</UserContext.Provider>;

@@ -7,8 +7,8 @@ import { ControlledTableProps } from './ControlledTable.types';
 export default function ControlledTable(props: ControlledTableProps) {
   const { selectableRows, stickFromColumn, columns, data, paginate, loading, ...rest } = props;
 
-  const memoizedData = useMemo((): unknown => data, [data]);
-  const memoizedColumns = useMemo((): Columns[] => columns, [columns]);
+  const memoizedData = useMemo((): unknown => data ?? [], [data]);
+  const memoizedColumns = useMemo((): Columns[] => columns ?? [], [columns]);
 
   const { tableInstance } = useControlledTableInstance({
     selectableRows,

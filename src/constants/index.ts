@@ -1,9 +1,9 @@
 const CONSTANTS = {
   PERMISSIONS: {
     COGNITO: {
-      ADMIN: 'IMContactActivityApiAdminUser',
-      USER: 'IMContactActivityApiUser',
-      CUSTOMER: 'IMCustomer',
+      ADMIN: 'IM_ADMIN',
+      USERS: 'Users',
+      CUSTOMER: 'Customer',
     },
   },
   COMPONENTS: {
@@ -51,6 +51,9 @@ const CONSTANTS = {
     LIST_COUNTIES_FOR_CUSTOMER: 'LIST_COUNTIES_FOR_CUSTOMER',
     CUSTOMER_PREFERENCE_FOR_COUNTY: 'CUSTOMER_PREFERENCE_FOR_COUNTY',
     GET_DEFAULT_PRIORITIES_FOR_PROPERTY: 'GET_DEFAULT_PRIORITIES_FOR_PROPERTY',
+    LIST_ENTREGAS: 'LIST_ENTREGAS',
+    LIST_VENDAS: 'LIST_VENDAS',
+    LIST_TICKETS: 'LIST_TICKETS',
   },
   STORAGE: {
     INITIALS: {
@@ -81,6 +84,7 @@ const CONSTANTS = {
     DONE: 'done',
     EXPAND_LESS: 'expand_less',
     EXPAND_MORE: 'expand_more',
+    MAIL: 'mail',
     FILTER_LIST: 'filter_list',
     FIRST_PAGE: 'first_page',
     FORM: 'edit_note',
@@ -98,6 +102,7 @@ const CONSTANTS = {
     LOGOUT: 'logout',
     MANAGE_ACCOUNTS: 'manage_accounts',
     NAVIGATE_NEXT: 'navigate_next',
+    REPLY: 'reply',
     NAVIGATE_BEFORE: 'navigate_before',
     PLAY_ARROW: 'play_arrow',
     SEARCH: 'search',

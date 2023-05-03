@@ -7,10 +7,11 @@ import ProtectedRoutes from './components/ProtectedRoutes';
 import { routes } from './routes';
 import Welcome from '../pages/dashboard/modules/welcome/Welcome';
 import AccessControl from '../pages/dashboard/modules/access-control/AccessControl';
-import ProcessRunner from '../pages/dashboard/modules/process-runner/ProcessRunner';
-import Complain from '../pages/complain/Complain';
+import Search from '../pages/dashboard/modules/search/Search';
+import Complain from '../pages/dashboard/modules/complain/Complain';
+import Inbox from '../pages/dashboard/modules/inbox/Inbox';
 
-const { login, notFound, dashboard, welcome, accessControl, processRunner, complain } = routes;
+const { login, notFound, dashboard, welcome, accessControl, search, complain, inbox } = routes;
 
 function Router() {
   return (
@@ -22,8 +23,9 @@ function Router() {
         <Route path={dashboard.path} element={<Dashboard />}>
           <Route index path={welcome.path} element={<Welcome />} />
           <Route path={accessControl.path} element={<AccessControl />} />
-          <Route path={processRunner.path} element={<ProcessRunner />} />
+          <Route path={search.path} element={<Search />} />
           <Route path={complain.path} element={<Complain />} />
+          <Route path={inbox.path} element={<Inbox />} />
         </Route>
       </Route>
       <Route path={notFound.path} element={<NotFound />} />

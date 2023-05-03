@@ -5,6 +5,10 @@ const configs = {
       position: 'bottom-right',
     },
   },
+  permissions: {
+    Customer: { complain: true, inbox: false },
+    User: { complain: false, inbox: true },
+  },
   toastConfigs: {
     position: 'bottom-center',
     autoClose: 6000,

@@ -1,0 +1,43 @@
+.im-message-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  .im-message-group {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    .im-message-header {
+      display: flex;
+      gap: 10px;
+    }
+    .im-message {
+      color: var(--typeface-medium-color);
+      text-align: justify;
+      line-height: 1.5;
+    }
+  }
+
+  .im-inbox-dialog-content {
+    padding: 20px;
+    margin-bottom: 15px;
+
+    .im-dialog-text {
+      margin-bottom: 20px;
+    }
+
+    .im-dialog-button-group {
+      display: flex;
+      justify-content: flex-end;
+      gap: 15px;
+    }
+  }
+
+  .im-answer-wrapper {
+    margin-top: 20px;
+    .im-answer {
+      color: var(--valid-color);
+    }
+  }
+}

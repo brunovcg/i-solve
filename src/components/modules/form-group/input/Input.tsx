@@ -120,7 +120,7 @@ function Input(
     e?.preventDefault();
     onBlur?.(initialValue);
 
-    setInputValue(initialValue);
+    setInputValue(initialValue ?? '');
     remainingCharactersRef.current?.setRemainingChars(value && maxLength ? maxLength - value.length : 0);
     setUncontrolledError('');
   };
@@ -208,6 +208,7 @@ function Input(
           maxLength={maxLength}
           placeholder={placeholder}
           disabled={disabled}
+          value={inputValue}
           max={maxValue}
           min={minValue}
           onFocus={handleFocus}

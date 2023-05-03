@@ -27,7 +27,7 @@ export default function useControlledTableInstance({
   paginate,
 }: UseControlledTableInstanceProps) {
   const hasManualWidthColumns = memoizedColumns.some((column: any) => column.width);
-  const totalResults = memoizedData.length;
+  const totalResults = memoizedData?.length;
 
   const tableInstanceConfigs = [
     useFilters,

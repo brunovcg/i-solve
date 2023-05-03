@@ -22,7 +22,7 @@ export default function Login() {
           <>
             <LoginForm navigateTo={routes.dashboard.path} />
             <div className="im-login-option-buttons">
-              <Button text="Forgot Password?" onClick={handleForgotPassword} variant="text" />
+              <Button text="Esqueceu a senha?" onClick={handleForgotPassword} variant="text" />
             </div>
           </>
         )}
