@@ -3,6 +3,9 @@
 ## Setting Environment Variables
 
 ## Running development environment
+```shell
+    $ npm run dev
+```
 
 ### Installing dependencies
 
