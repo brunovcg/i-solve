@@ -62,9 +62,9 @@ export default function Groups() {
 
   const groupsColumns = [
     { Header: 'Name', accessor: 'name' },
-    { Header: 'Description', accessor: 'description' },
-    { Header: 'Created', accessor: 'created' },
-    { Header: 'Modified', accessor: 'modified' },
+    { Header: 'Descrição', accessor: 'description' },
+    { Header: 'Criação', accessor: 'created' },
+    { Header: 'Modificado', accessor: 'modified' },
     {
       Header: 'Members',
       Cell: ({ row }: ColumnCellProps) => (

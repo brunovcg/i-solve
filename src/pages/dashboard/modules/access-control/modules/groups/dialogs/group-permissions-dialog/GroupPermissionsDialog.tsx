@@ -31,14 +31,14 @@ export default function GroupMembersDialog() {
     {
       id: 1,
       accessor: 'ApplicationModule',
-      component: 'Application Module',
+      component: 'Módulo da Aplicação',
       headerAlignment: 'left' as Alignment,
       cellAlignment: 'left' as Alignment,
     },
     {
       id: 2,
       accessor: 'permissions',
-      component: 'Permissions',
+      component: 'Permissão',
     },
   ];
 

@@ -76,7 +76,8 @@
     "format": "prettier --ignore-path .gitignore --write \"**/*.{js,jsx,json,ts,tsx,css,scss,md}\"",
     "validate": "run-p lint type:check format:check",
     "prepare": "husky install",
-    "json-server": "json-server --watch .json-server/db.json --port 4444"
+    "json-server": "json-server --watch .json-server/db.json --port 4444",
+    "dev": "json-server --watch .json-server/db.json --port 4444 & react-scripts start"
   },
   "eslintConfig": {
     "extends": [

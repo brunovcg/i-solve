@@ -36,23 +36,23 @@ export default function ManageUserGroupsDialog({ user }: ManageUserGroupsDialogT
     {
       id: 1,
       accessor: 'name',
-      component: 'Group',
+      component: 'Grupo',
       headerAlignment: 'left' as const,
       cellAlignment: 'left' as const,
     },
     {
       id: 2,
       accessor: 'created',
-      component: 'Created',
+      component: 'Criação',
     },
     {
       id: 3,
       accessor: 'modified',
-      component: 'Modified',
+      component: 'Modificado',
     },
     {
       id: 4,
-      component: 'Remove From Group',
+      component: 'Remover do Grupo',
       accessor: 'name',
       template: ({ value }: GridTemplateArgs) => (
         <DeleteConfirmation
